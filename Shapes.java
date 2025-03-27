@@ -90,9 +90,12 @@ class Shapes
                 }
             }
         //}        
+        //
+        }
         //sc.close();
     }
-    }}
+    
+}
 
 class rectangle
 {
