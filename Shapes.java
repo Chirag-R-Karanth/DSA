@@ -15,16 +15,31 @@ class Shapes
                 case 1:
                 {
                     rectangle.make(len,bre);
+                    break;
                 }
 
                 case 2:
                 {
                     hollowrectangle.make(len,bre);
+                    break;
                 }
 
                 case 3:
                 {
                     halfpyramid.make(len,bre);
+                    break;
+                }
+
+                case 4:
+                {
+                    invhalfpyramid.make(len,bre);
+                    break;
+                }
+
+                case 5:
+                {
+                    invrothalfpyramid.make(bre);
+                    break;
                 }
             }
         //}        
@@ -47,7 +62,7 @@ class rectangle
     }
 }
 
-class hollowrectangle {
+class hollowrectangle {//Check onceas I dont know
     static void make(int len, int bre) {
         for (int l = 1; l <= len; l++) {
             for (int b = 1; b <= bre; b++) {
@@ -87,10 +102,40 @@ class hollowrectangle {
 
 class halfpyramid{
     static void make(int len , int bre){
-        int count=1;
+        //int count=1;
         for(int j=1; j<=bre ;j++){
             for(int l=j; l>=1 ;l--){
                 System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+class invhalfpyramid{
+    static void make(int len , int bre){
+        //int count=1;
+        for(int j=bre; j>=1 ;j--){
+            for(int l=j; l>=1 ;l--){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+class invrothalfpyramid{
+    static void make(int bre){
+        for(int j=bre; j>=1 ;j--){
+            for(int l=1; l<=bre ;l++){
+                if(l > j-1){
+                    //System.out.print(" ");
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+                //if(l)
             }
             System.out.println();
         }
