@@ -5,47 +5,94 @@ class Shapes
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
-        int len=sc.nextInt();
-        int bre=sc.nextInt();
-        int choice=sc.nextInt();
+        int len;
+        int bre;
+        //int choice=sc.nextInt();
+        while (true) 
+        {
+            // Clear menu display
+            System.out.println("\n--- PATTERN MENU ---");
+            System.out.println("0. Exit");
+            System.out.println("1. Solid Rectangle");
+            System.out.println("2. Hollow Rectangle");
+            System.out.println("3. Half Pyramid");
+            System.out.println("4. Inverted Half Pyramid");
+            System.out.println("5. Right-Aligned Pyramid");
+            System.out.println("6. Inverted Right-Aligned Pyramid");
+            
+            System.out.print("\nEnter your choice: ");
+            int choice = sc.nextInt();
+            
+            // Exit condition
+            /*if (choice == 0) {
+                System.out.println("Exiting program...");
+                break;
+            }*/
         //while(1)
         //{
             switch(choice)
             {
+                case 0:
+                {
+                    System.out.println("Exiting Code......");
+                    System.exit(0);
+                }
                 case 1:
                 {
+                    System.out.print("\nEnter Length: ");
+                    len=sc.nextInt();
+                    System.out.print("\nEnter Breadth: ");
+                    bre=sc.nextInt();
                     rectangle.make(len,bre);
                     break;
                 }
 
                 case 2:
                 {
+                    System.out.print("\nEnter Length: ");
+                    len=sc.nextInt();
+                    System.out.print("\nEnter Breadth: ");
+                    bre=sc.nextInt();
                     hollowrectangle.make(len,bre);
                     break;
                 }
 
                 case 3:
                 {
-                    halfpyramid.make(len,bre);
+                    System.out.print("\nEnter Length: ");
+                    len=sc.nextInt();
+                    halfpyramid.make(len);
                     break;
                 }
 
                 case 4:
                 {
-                    invhalfpyramid.make(len,bre);
+                    System.out.print("\nEnter Length: ");
+                    len=sc.nextInt();
+                    invhalfpyramid.make(len);
                     break;
                 }
 
                 case 5:
                 {
-                    invrothalfpyramid.make(bre);
+                    System.out.print("\nEnter Length: ");
+                    len=sc.nextInt();
+                    invrothalfpyramid.make(len);
+                    break;
+                }
+
+                case 6:
+                {
+                    System.out.print("\nEnter Length: ");
+                    len=sc.nextInt();
+                    trinum.make(len);
                     break;
                 }
             }
         //}        
-        sc.close();
+        //sc.close();
     }
-}
+    }}
 
 class rectangle
 {
@@ -101,7 +148,7 @@ class hollowrectangle {//Check onceas I dont know
 }*/
 
 class halfpyramid{
-    static void make(int len , int bre){
+    static void make( int bre){
         //int count=1;
         for(int j=1; j<=bre ;j++){
             for(int l=j; l>=1 ;l--){
@@ -113,7 +160,7 @@ class halfpyramid{
 }
 
 class invhalfpyramid{
-    static void make(int len , int bre){
+    static void make(int bre){
         //int count=1;
         for(int j=bre; j>=1 ;j--){
             for(int l=j; l>=1 ;l--){
@@ -141,3 +188,13 @@ class invrothalfpyramid{
         }
     }
 }
+
+class trinum{
+    static void make(int bre){
+        for(int j=1; j<=bre ;j++){
+            for(int l=j; l>=1 ;l--){
+                System.out.print(l);
+            }
+            System.out.println();
+    }
+}}
