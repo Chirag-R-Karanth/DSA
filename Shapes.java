@@ -8,6 +8,7 @@ class Shapes
         int len=sc.nextInt();
         int bre=sc.nextInt();
         rectangle.make(len,bre);
+        sc.close();
     }
 }
 
