@@ -35,6 +35,7 @@ class Shapes
                 case 0:
                 {
                     System.out.println("Exiting Code......");
+                    sc.close();
                     System.exit(0);
                 }
                 case 1:
@@ -90,9 +91,12 @@ class Shapes
                 }
             }
         //}        
-        //sc.close();
+        //
+        }
+        
     }
-    }}
+    
+}
 
 class rectangle
 {
