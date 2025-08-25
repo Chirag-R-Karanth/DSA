@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import shapes.*;
 
 class Shapes
 {
@@ -22,6 +23,7 @@ class Shapes
             System.out.println("7. Inverted Triangle of numbers");
             System.out.println("8. Floyds Triangle");
             System.out.println("9. Zeroone");
+            System.out.println("10. Butterfly");
             
             System.out.print("\nEnter your choice: ");
             int choice = sc.nextInt();
@@ -117,6 +119,14 @@ class Shapes
                     zeroone.make(len);
                     break;
                     
+                }
+                
+                case 10:
+                {
+                    System.out.print("\nEnter Length: ");
+                    len=sc.nextInt();
+                    Butterfly.make(len);
+                    break;
                 }
             }
         //}        
